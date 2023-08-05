@@ -1,0 +1,7 @@
+{
+  "username": "root",
+  "password": "Keroro2424.!",
+  "database": "shop",
+  "host": "192.168.219.200",
+  "dialect": "mysql"
+}
