@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
     if (user) {
       const token = jwt.sign({ username: user.username, user_id: user.id, accounttype:user.accounttype }, SECRET_KEY, { expiresIn: "15m", issuer: "토큰발급자" });
       res.cookie('token', token, { httpOnly: true });
-      res.redirect('http://localhost:3000');
+      res.redirect('http://www.devops.com');
     } else {
       res.status(401).json({ message: "Authentication failed" });
       res.redirect('/auth/login');
