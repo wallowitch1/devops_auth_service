@@ -1,6 +1,7 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 const path = require('path')
 const db = require('./models');
