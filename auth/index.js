@@ -17,10 +17,8 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const SECRET_KEY = "keroro2424.";
-
 // 로그 파일 스트림 생성
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
+const accessLogStream = fs.createWriteStream(path.join('/var/log/app/access.log'), { flags: 'a' });
 
 // morgan을 사용하여 액세스 로그 설정
 app.use(morgan('combined', { stream: accessLogStream }));
