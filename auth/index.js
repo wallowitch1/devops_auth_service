@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // cache 테스트
+// cache 테스트
+// cache 테스트
+// cache 테스트
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
