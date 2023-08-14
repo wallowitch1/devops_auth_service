@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+
+
+
 // 로그 파일 스트림 생성
 const accessLogStream = fs.createWriteStream(path.join('/var/log/app/access.log'), { flags: 'a' });
 

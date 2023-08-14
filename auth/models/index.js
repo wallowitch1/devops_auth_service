@@ -1,5 +1,11 @@
 const Sequelize = require('sequelize');
-const config = require('../config/config.json'); // 데이터베이스 설정 파일 위치에 맞게 경로를 수정해주세요
+const config = {
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  dialect: "mysql"
+};
 
 const sequelize = new Sequelize(config.database, config.username, config.password, {
   host: config.host,
